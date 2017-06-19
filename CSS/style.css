@@ -1,0 +1,508 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-03-16 09:26:33
+ * @version $Id$
+ */
+/*****************************************************************************/
+html,body{
+    /*font-family: 楷体;*/
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+header{
+    height: 40px;
+    overflow-y:hidden ;
+    border-bottom: 1px solid #ff6700;
+}
+header div a,.rightMenu>div a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+}
+header div a i{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px!important;
+    line-height: 30px!important;
+}
+#menu a i{
+    background:url("../img/svg/plus.svg") no-repeat center;
+    background-size: 62%;
+}
+/*右边滑动菜单顶部样式*/
+.rightMenu{
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #f6f6f6;
+    font-family: "华文行楷";
+    -webkit-transition: left 0.3s ;
+    -moz-transition: left 0.3s ;
+    -ms-transition: left 0.3s ;
+    -o-transition: left 0.3s ;
+    transition: left 0.3s ;
+}
+.leftMove{
+    left: 0%;
+}
+.rightMenu div{
+    height: 40px;
+    text-align: center;
+}
+.rightMenu>div a{
+    font-size: 20px;
+    color: #6f6f6f;
+    line-height: 40px;
+}
+.rightMenu span{
+    line-height: 40px;
+    font-family: "华文新魏";
+    font-size: 22px;
+}
+/*右边滑动菜单内容样式*/
+.rightMenu dl dt{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    color: #696969;
+    margin: 5px 0;
+}
+.rightMenu dl dd{
+    width: 33%;
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+    z-index: 100;
+    -webkit-transition: all 0.6s ;
+    -moz-transition: all 0.6s ;
+    -ms-transition: all 0.6s ;
+    -o-transition: all 0.6s ;
+    transition: all 0.6s ;
+}
+.rightMenu dl dd a{
+    line-height: 30px;
+    display: inline-block;
+    width: 74%;
+    height: 30px;
+    border: 1px solid #e7e7e7;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    position: relative;
+}
+.rightMenu dl dd a i{
+    position: absolute;
+    top:calc(0% - 7.5px);
+    right:0%;
+    background: #fff;
+    display: block;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #e7e7e7;
+    color: #9f9f9f;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 12px;
+    font-style: normal;
+}
+.rightMenu dl:nth-of-type(1) dd a i{
+    font-size: 20px;
+    font-family: "微软雅黑";
+    line-height: 8px;
+}
+/*//主页导航栏*/
+header nav{
+    width: calc(100% - 80px);
+    height: 40px;
+    overflow-x:scroll;
+}
+header nav.bef:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 40px;
+    width: 10px;
+    height: 38px;
+    background: -webkit-radial-gradient(left center, 10px 30px, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+header nav.aft:after{
+    content: "";
+    position: absolute;
+    top:0;
+    right: 40px;
+    width: 10px;
+    height: 38px;
+    background: -webkit-radial-gradient(right center, 10px 30px, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+header nav::-webkit-scrollbar{
+    display: none;
+}
+header nav li{
+    height: 40px;
+    line-height: 43px;
+    text-align: center;
+}
+header nav li.checked{
+    color: #ff6700;
+    font-size: 1.1em;
+}
+header nav li a{
+    display: inline-block;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+/*main*/
+main{
+    height: calc(100% - 40px);
+    width: 100%;
+    overflow-y: scroll;
+}
+main::-webkit-scrollbar{
+    background-color: #fff;
+    width: 3px;
+}
+main::-webkit-scrollbar-thumb{
+    background: repeating-linear-gradient(0deg, #ffcd38 0%, #ff6700 50%, #ffcd38 100% );
+    width: 10px;
+}
+main .styleOne,main .styleTwo{
+    position: relative;
+    margin: 0 8px 0 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #dddddd;
+    font-size: 0.8em;
+    width: calc(100% - 20px);
+}
+main .styleOne span,main .styleTwo span{
+    font-size: 0.75em;
+    color: #464646;
+}
+main .styleOne i,main .styleTwo i{
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    border: 1px solid #a5a3a3;
+    border-radius: 6px;
+    color: #a5a3a3;
+    font-size: 10px;
+    margin:0 5px;
+}
+main .styleOne i:before,main .styleTwo i:before{
+    position: relative;
+    left: 5px;
+    top: -1px;
+}
+main .styleTwo h4{
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+main .styleTwo .imgBox img{
+    width: 33.33%;
+    padding-right: 2px;
+}
+main .styleOne h4{
+    line-height: 20px;
+    width: 66.66%;
+    padding-right: 15px;
+}
+main .styleOne .imgBox{
+    width: 33.33%;
+}
+main .styleOne .imgBox img{
+    width: 100%;
+    padding-right: 2px;
+}
+/*用户信息界面*/
+.userBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-x: scroll;
+}
+.userBox::-webkit-scrollbar{
+    display: none;
+}
+.userBox .mask{
+    width: 170%;
+    height: 100%;
+    background: #000;
+    display: none;
+}
+.userBox .container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 70%;
+}
+
+.userBox .container #userIntro{
+    width: 70%;
+    height: 100%;
+    margin-left: -70%;
+    background: #fff;
+}
+#userIntro div:nth-child(1){
+    height: 30%;
+    margin: 0 5%;
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+    padding-top: 21%;
+}
+#userIntro div:nth-child(1) a{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-left: calc(50% - 30px);
+}
+#userIntro div:nth-child(1) img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#userIntro div:nth-child(2){
+    height: 60%;
+    margin: 0 5%;
+}
+#userIntro div:nth-child(2) a{
+    display: block;
+    height: 70px;
+    line-height: 70px;
+}
+#userIntro div:nth-child(2) a figure{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 20px 10px -5px 10px;
+}
+#userIntro div:nth-child(2) li:nth-child(1) figure{
+    background: url("../img/svg/comment.svg") no-repeat ;
+    background-size:contain;
+}
+#userIntro div:nth-child(2) li:nth-child(2) figure{
+    background: url("../img/svg/star.svg") no-repeat ;
+    background-size:contain;
+}
+#userIntro div:nth-child(2) li:nth-child(3) figure{
+    background: url("../img/svg/news.svg") no-repeat ;
+    background-size:contain;
+}
+#userIntro div:nth-child(2) li:nth-child(4) figure{
+    background: url("../img/svg/set.svg") no-repeat ;
+    background-size:contain;
+}
+#userIntro div:nth-child(3){
+    height: 10%;
+    text-align: center;
+    background: #e8e8e8;
+}
+#userIntro div:nth-child(3) a{
+    display: block;
+    padding-top: 5px;
+    height: 100%;
+    font-size: 0.9em;
+}
+#userIntro div:nth-child(3) figure{
+    width: 25px;
+    height: 25px;
+    background: url("../img/svg/portrait_merge.svg") no-repeat ;
+    background-size:contain;
+    margin-left: calc(50% - 12.5px);
+}
+/*新闻弹出页*/
+.newsCont{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    -webkit-transition: left 0.5s ;
+    -moz-transition: left 0.5s ;
+    -ms-transition: left 0.5s ;
+    -o-transition: left 0.5s ;
+    transition: left 0.5s ;
+    background: #000;
+}
+.newsHead{
+    background: rgba(0, 0, 0, 1);
+    height: 50px;
+    opacity: 0.65;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+.newsHead img{
+    width: 21px;
+    height: 21px;
+    margin-top: 13.5px;
+    margin-bottom: -5px;
+}
+.newsHead a{
+    display: inline-block;
+    height: 50px;
+    font-size: 0.85em;
+    color: #fff;
+    margin:0 calc((100% - 240px) / 12);
+}
+.newsHead a:nth-child(2){
+    background: #129bf0;
+    height: 18px;
+    padding:0 calc((100% - 240px) / 12);
+    margin: 0;
+}
+.newsMain{
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.65);
+}
+.newsMain h4{
+    color: #fff;
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+    padding: 10px 10px 5px 10px ;
+}
+.newsMain p:nth-of-type(1){
+    color: #888;
+    overflow: hidden;
+    height: 65px;
+    font-size: 0.8em;
+    line-height: 1.5;
+    border-bottom: 1px solid #888;
+    padding: 0 10px;
+}
+.newsMain p:nth-of-type(3){
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    height: 50px;
+    font-size: 0.8em;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+.newsMain p:nth-of-type(3) a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #bababa;
+    text-align: center;
+    padding-top: 14px;
+    border-left: 1px solid #b2b2b2;
+}
+.newsMain p:nth-of-type(3) a img{
+    width: 10px;
+    height: 10px;
+}
+.newsMain p:nth-of-type(3) input{
+    border:none;
+    outline: none;
+    background: transparent;
+    width: calc(100% - 50px);
+    color: #fff;
+    line-height: 50px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+.newsMain p:nth-of-type(3) input::placeholder{
+    color: rgba(231, 231, 231, 0.87);
+}
+.newsMain p:nth-of-type(2){
+    position: absolute;
+    right: 0px;
+    top: 0;
+    padding: 10px 10px ;
+}
+.newsMain p:nth-of-type(2) span{
+    color: #fff;
+    font-size: 0.7em;
+}
+.newsMain p:nth-of-type(2) span:nth-of-type(1){
+    font-size: 1.1em;
+}
+.figBox{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0 50px 0;
+    overflow-x:scroll;
+    overflow-y: hidden;
+}
+.figBox figure{
+    height: 100%;
+    padding-bottom: 50px;
+    line-height: 667px;
+}
+.figBox img {
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+.test{
+    width: 500px;
+    height: 500px;
+    overflow-y: scroll;
+    background:red;
+}
+.test div{
+    margin-top: 500px;
+    width: 200px;
+    height: 200px;
+    background: lime;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
